@@ -1,0 +1,119 @@
+✅ Positive Test Cases – Casino Page & Notification Features
+Verify redirection to the casino page when the user clicks the "Casino" button from the home page.
+Verify appropriate error message is shown when clicking the "Casino" button without an internet connection.
+Verify unread notification badge count updates correctly when new notifications are received.
+Verify proper display of "No notifications" message when there are no notifications.
+Verify notification icon reflects read and unread status accurately.
+Verify clicking on the notification icon displays the list of notifications properly.
+Verify search functionality returns correct results when a valid keyword is entered in the search field.
+Verify filter icon opens the filter menu successfully.
+Verify selecting a single item from the filter and clicking "Apply" updates the game list accordingly.
+Verify selecting multiple filter items and clicking "Apply" displays relevant filtered game results.
+Verify clicking "Apply" without selecting any filters retains the unfiltered game list.
+Verify the search field displays matching games when partial keywords are entered.
+Verify the notification symbol updates instantly when a new notification is received.
+Verify an appropriate message is shown when refreshing the casino page without internet connection.
+Verify clicking on the "All" tab shows the complete list of casino games.
+Verify clicking on the "Fav" tab displays only favorited games.
+Verify clicking on the "Top Games" tab displays games marked as popular or trending.
+Verify clicking on the "Instant Win" tab shows relevant instant win games.
+Verify clicking on the "Crash Games" tab loads all available crash games.
+Verify clicking on the "Roulette" tab loads roulette games properly.
+Verify empty state is shown in "All" tab when there are no games available.
+Verify empty state is shown in "Fav" tab when no games are marked as favorite.
+Verify empty state is shown in "Top Games" tab when there are no top games.
+Verify empty state is shown in "Instant Win" tab when no games are available under that category.
+Verify empty state is shown in "Crash Games" tab when no crash games exist.
+Verify empty state is shown in "Roulette" tab when there are no roulette games.
+Verify game added to favorites appears in the "Fav" tab.
+Verify removed favorite game no longer appears in the "Fav" tab.
+
+🎯 Negative Test Cases – Casino Page & Notification Features
+
+Verify casino page does not load when clicking on "Casino" button without internet connection.
+Verify error message when clicking on "Casino" button and the casino service/server is down.
+Verify that clicking on "Casino" does not crash app when there are no games loaded.
+Verify clicking on notification icon when notifications API fails or returns an error.
+Verify notification count remains 0 when there are notifications, but the server fails to respond.
+Verify unread badge count is incorrect or not displayed when count exceeds system display limit (e.g. 99+).
+Verify clicking on a filter item with a broken tag (invalid metadata) doesn’t break the UI.
+Verify applying filters with corrupted or expired data returns an appropriate error message.
+Verify when user clicks "Apply" on filter without selecting any item – system should not crash or misbehave.
+Verify the search field with SQL injection or script tag input – system should sanitize input.
+Verify the search field with only special characters (e.g., @@@###) returns a proper "No result found" message.
+Verify search functionality with extremely long input (e.g., 500+ characters).
+Verify clicking on the “All” tab when there are no games available – should show empty state, not crash.
+Verify clicking on “Fav” tab with no internet – should handle gracefully with cached or error message.
+Verify adding a game to fav list when server fails – item should not appear in “Fav” tab.
+Verify removing a game from fav list when there is no server response – item should remain.
+Verify refreshing casino page without internet shows appropriate error/toast and no crash.
+Verify clicking on Instant Win / Crash / Roulette tabs when game data is malformed or corrupted.
+Verify multiple rapid taps on filter icon or apply button does not freeze or duplicate actions.
+Verify filter tags do not persist after logout and login if session is reset.
+
+For Admin
+
+Positive Test Cases (Casino Management & Game Sessions):
+
+Verify that clicking on the "Casino Management" tab from the navigation bar redirects to the correct page.
+Verify that clicking the "Refresh Dashboard" button updates the dashboard data.
+Verify the "Month" dropdown list in the dashboard functions correctly.
+Verify the "Week" dropdown list in the dashboard functions correctly.
+Verify the "Today" dropdown list in the dashboard functions correctly.
+Verify that clicking on the "Game" tab from the casino navigation redirects to the correct page.
+Verify the functionality of the "Refresh" button on the Game page.
+Verify that different refresh intervals can be selected successfully.
+Verify that clicking the "Update Game Statistics" button updates statistics.
+Verify that entering characters in the search field filters game results correctly.
+Verify that selecting a game provider filters the results accordingly.
+Verify that selecting a game type filters the results accordingly.
+Verify that selecting an aggregator filters the results accordingly.
+Verify that selecting "Active" status filters games accordingly.
+Verify that selecting "Inactive" status filters games accordingly.
+Verify that selecting "Yes" from the Top Pick dropdown filters games correctly.
+Verify the functionality of the "Fetch" button with selected filters.
+Verify enabling and disabling game status via the toggle button.
+Verify selecting "Yes" or "No" from the Top Pick dropdown updates the value.
+Verify that the "Thumb URL" field displays the correct image.
+Verify all displayed game fields: Name, Game Provider, Game Type, Aggregator, Priority, Info, and Statistics.
+Verify that clicking "+ Add Category" opens the Add Game Category page.
+Verify that uploading an image in the Add Game Category form works as expected.
+Verify that string, numeric, and special characters can be entered in the category name field.
+Verify that entering a duplicate category name is handled appropriately.
+Verify that numeric, string, and special characters can be tested in the sequence field.
+Verify the status toggle (Active/Inactive) for a game category.
+Verify that valid inputs create a new game category successfully.
+Verify that clicking the cancel button redirects back or clears the form.
+Verify that the newly added category appears on the Game Category page.
+Verify that the Edit and Delete actions work on the Game Category page.
+Verify that the search functionality on the Game Providers page works.
+Verify all fields: Image, Name, Aggregator, and Status on the Game Providers page.
+Verify the enable/disable toggle for a game provider.
+Verify that the Export button downloads admin data correctly.
+Verify the search and filter functionality on the Game Session page.
+Verify that filters such as User ID, Aggregator, Date Range, Status, Amount Range, and Username function properly.
+Verify fields in the Game Session page: Mobile number, Game name, Profit/Loss, Withdraw Amount, Logs, etc.
+Verify the pagination functionality works correctly.
+
+Negative Test Cases 
+
+Verify that clicking on "Casino Management" without proper authorization redirects or shows an error.
+Verify the dashboard doesn’t refresh when the network is disconnected.
+Verify invalid input in dropdowns does not crash the page.
+Verify that entering special characters in the search field shows no results or validation error.
+Verify game statistics do not update when the backend service is unavailable.
+Verify that the game fails to fetch if an invalid aggregator or provider is selected.
+Verify entering an invalid image or unsupported file type when adding a game category shows an error.
+Verify that a duplicate category name or sequence number shows a proper error.
+Verify that the create button is disabled when required fields are left empty in the game category form.
+Verify trying to enable/disable a game or provider without permissions displays an error.
+Verify trying to fetch game data with the network disconnected fails gracefully.
+Verify the Export button gives appropriate feedback when no data is available to export.
+Verify entering characters instead of numbers in the "Amount From" and "Amount To" fields shows validation errors.
+Verify special characters and invalid formats in filter fields cause no crashes.
+Verify double-clicking on disabled amount fields does not cause unexpected behavior.
+Verify that selecting a future date in the game session or bet history page gives an appropriate warning.
+Verify trying to update a game or session that no longer exists displays an appropriate error.
+Verify that removing a game or category in use shows a proper confirmation or error.
+Verify that the page behaves correctly when no games or game categories exist.
+Verify that excessive characters in the game category form fields are restricted.
