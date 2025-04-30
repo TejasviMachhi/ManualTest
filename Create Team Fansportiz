@@ -1,0 +1,37 @@
+🧪 Team Creation Test Cases (Fansportiz)
+Verify that the user can manually create a team to join a contest.
+Verify that the system prevents creation of multiple teams with the same name at the same time.
+Verify that the auto-pick feature selects all players as per the team creation rules.
+Verify that after using auto-pick, the user still needs to manually select captain and vice-captain.
+Verify behavior when the user selects captain and vice-captain, then deselects them, and re-selects new ones.
+Verify the credit point value for the selected captain is calculated correctly.
+Verify the credit point value for the selected vice-captain is calculated correctly.
+Verify that the maximum number of players from the same team is restricted to 7 and total players must be 11.
+Verify the behavior when a selected vice-captain is later removed from the match lineup by the coach.
+Verify that selected player credit points are displayed as per requirements.
+Verify that a toast message is displayed upon selecting the 11th and final player for the team.
+Verify system behavior when selected players include one who is removed before the match starts.
+Verify system behavior when the selected captain is removed before the match starts.
+Verify that all player names and their details (role, team, etc.) are displayed correctly.
+Verify that newly added players are visible in the player list before the match begins.
+Verify the accuracy of team members’ names and their associated details.
+Verify that players are correctly associated with their respective team names.
+Verify that once the required number of players are selected, remaining players are disabled for further selection.
+Verify system behavior when the user selects only 6 players and tries to proceed.
+Verify system prevents selection of more than 8 players from the same real-world team.
+Verify that clicking on "More than 7 players" button deselects all players as expected.
+Verify that the total credit points are deducted correctly after selecting any player.
+Verify that the count of selected players (out of 11) updates correctly when players are selected or deselected.
+Verify that the “0/11 Players” indicator updates correctly after each selection or removal.
+Verify mandatory selection of at least 1 WL (Wicket Keeper).
+Verify mandatory selection of 1 to 5 ALLR (All-Rounders).
+Verify mandatory selection of 1 to 4 BT (Batsmen).
+Verify mandatory selection of at least 1 BWL (Bowler).
+Verify system behavior when the user tries to select more than 1 WL player.
+Verify system behavior when the user tries to select more than 5 ALLR players.
+Verify system behavior when the user tries to select more than 4 BT players.
+Verify system behavior when the user tries to select more than 1 BWL player.
+Verify that the user can select batsmen from both teams.
+Verify that the user can select all-rounders from both teams.
+Verify that the user can select 1 wicket keeper from either team.
+Verify that the user can select at least 1 bowler from either team.
