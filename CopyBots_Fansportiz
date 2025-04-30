@@ -1,0 +1,41 @@
+🟡 Radio Button Functionality (Agent Create?)
+Verify that the "No" radio button in the "Agent Create?" section is clickable.
+Verify that the "Yes" radio button in the "Agent Create?" section is clickable.
+Select the "No" option in the "Agent Create?" section and click the "Create Contest" button.
+Select the "Yes" option in the "Agent Create?" section and click the "Create Contest" button.
+
+🟢 Form Validation with "Agent Create?" Enabled
+Verify that a contest can be created successfully after entering all required details and enabling the "Agent Create?" section.
+Verify that attempting to create a contest with required fields left empty and "Agent Create?" enabled shows appropriate validation errors.
+
+🔴 Validation for "Min No. of Teams for Agent" Field
+Enter a value greater than the maximum allowed in the "Min No. of Teams for Agent" field and verify validation.
+Enter a value less than the minimum allowed in the "Min No. of Teams for Agent" field and verify validation.
+Enter a negative value in the "Min No. of Teams for Agent" field and verify validation.
+Enter special characters in the "Min No. of Teams for Agent" field and verify validation.
+Enter alphabetic characters in the "Min No. of Teams for Agent" field and verify validation.
+
+🔵 Validation for "Clone Agents per Team" Field
+Verify that the default value for the "Clone Agents per Team" field is 3.
+Enter a value greater than the maximum allowed in the "Clone Agents per Team" field and verify validation.
+Enter a value less than the minimum allowed in the "Clone Agents per Team" field and verify validation.
+Enter a negative value in the "Clone Agents per Team" field and verify validation.
+Enter special characters in the "Clone Agents per Team" field and verify validation.
+Enter alphabetic characters in the "Clone Agents per Team" field and verify validation.
+
+🟣 Validation for "Number for Same Clone Agent Team" Field
+Enter a value greater than the maximum allowed in the "Number for Same Clone Agent Team" field and verify validation.
+Enter a value less than the minimum allowed in the "Number for Same Clone Agent Team" field and verify validation.
+Enter a negative value in the "Number for Same Clone Agent Team" field and verify validation.
+Enter special characters in the "Number for Same Clone Agent Team" field and verify validation.
+Enter alphabetic characters in the "Number for Same Clone Agent Team" field and verify validation.
+
+🟤 Partial Field Entry Validation
+Fill in only the "Min No. of Teams for Agent" field, leave the other two fields empty, and click the "Create Contest" button.
+Fill in the "Min No. of Teams for Agent" and "Clone Agents per Team" fields, leave the last field empty, and click the "Create Contest" button.
+Fill in only the "Clone Agents per Team" field, leave the first and last fields empty, and click the "Create Contest" button.
+Fill in the "Min No. of Teams for Agent" and "Number for Same Clone Agent Team" fields, leave the middle field empty, and click the "Create Contest" button.
+Fill in the "Clone Agents per Team" and "Number for Same Clone Agent Team" fields, leave the first field empty, and click the "Create Contest" button.
+
+✅ Positive Test Case
+Enter valid data in all required fields, enable the "Agent Create?" section, and click the "Create Contest" button to ensure successful contest creation.
