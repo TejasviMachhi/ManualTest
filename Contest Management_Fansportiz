@@ -1,0 +1,44 @@
+🟡 Contest Management Section
+Verify the functionality of the "Contest Management" button.
+Verify the search functionality by entering a contest name in the search field.
+Verify the "Type" field by selecting "Public" from the dropdown list.
+Verify the "Type" field by selecting "Private" from the dropdown list.
+Verify the "Status" field by selecting "Cancelled Contest" from the dropdown list.
+Verify the "Status" field by selecting "Not Cancelled Contest" from the dropdown list.
+Verify the functionality of the "Export" button on the page.
+Verify the functionality of the "Base Team" button on the page.
+Verify the functionality of the "Expert Team" button on the page.
+Verify the functionality of the "Refresh" button on the page.
+Verify the "Edit Combination Agent Teams" button functionality.
+Verify the "Edit Normal Agent Teams" button functionality.
+Verify the functionality of the "+Add Match Contest" button.
+Verify the functionality of the "Manage Columns" button.
+Verify that selecting item names in the "Arrange Columns" section updates the column view accordingly.
+Verify that deselecting item names in the "Arrange Columns" section updates the column view accordingly.
+Verify the "Reset to Default" button in the "Manage Your Columns" section restores the original column settings.
+Verify the "Cancel" button in the "Manage Your Columns" section closes the modal without changes.
+Verify clicking the "Action" icon in the contest details row displays the action dropdown.
+Verify the "Agents Log" option from the action dropdown opens the correct page or modal.
+Verify the "Create Combination of Agents" option from the action dropdown opens the correct page or modal.
+Verify the "Promo Usages List" option from the action dropdown opens the correct page or modal.
+Verify the "Passbook Entries" option from the action dropdown opens the correct page or modal.
+Verify the "Cancel Contest" option from the action dropdown properly cancels the contest.
+
+🔵 Base Team Functionality
+Verify clicking the "Create Base Team" button opens the team creation modal or page.
+Verify validation by trying to create a team with an already existing team name.
+Verify that users can select players from both participating teams.
+Verify the "Copy" button duplicates the current base team.
+Verify clicking the "Save" button after valid player selection successfully saves the team.
+Verify error handling when selecting more players than allowed in a specific category.
+Verify clicking the "Discard" button clears the current selection or exits the page without saving.
+Verify that leaving the team name field empty and selecting players results in a validation error when clicking "Save".
+Verify that the saved team displays the same players that were selected by the user.
+Verify the "Edit" icon functionality for updating existing base teams.
+Verify clicking the "Delete Teams" button removes selected teams.
+Verify the delete icon deletes a specific team from the base team list.
+Verify the "Refresh" button updates the base team page to reflect latest changes.
+Verify creating more than one team and clicking the "Save All" button saves all created teams.
+Verify that creating two teams with the same players is allowed or appropriately restricted based on business rules.
+Verify the base team count is displayed correctly in the "Agents Log" page when accessed via the action dropdown.
+Verify that users cannot add agents without creating a base team.
