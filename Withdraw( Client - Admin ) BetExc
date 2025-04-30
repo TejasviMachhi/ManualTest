@@ -1,0 +1,107 @@
+✅ Positive Test Cases for Withdraw Functionality
+Verify user successfully clicks on the "Withdraw" button from the Home page and is redirected to the withdraw page.
+Verify that the user can successfully withdraw the minimum allowed amount (e.g., ₹50).
+Verify that the user can successfully withdraw the maximum allowed amount (e.g., ₹6000).
+Verify that the user’s available balance is updated automatically after a successful withdrawal.
+Verify that the "Proceed" button is enabled when a valid withdrawal amount is entered.
+Verify that the user can withdraw an amount equal to their current available balance.
+Verify that the user can successfully click on the +₹1000, +₹2500, +₹5000 buttons to update the amount field and proceed.
+Verify that the user can withdraw by selecting different payment methods like "Normal" and "Express" options.
+Verify that when the user enters a valid withdrawal amount (e.g., ₹2500), they are able to successfully proceed and withdraw the money.
+Verify that the user is able to enter the amount and proceed by selecting the "Normal" withdrawal option.
+Verify that the user is able to select "Express" withdrawal option and proceeds with the transaction.
+Verify that after selecting the amount and pressing "Proceed," the user is directed to the correct payment gateway page for further steps.
+Verify that the user receives a confirmation message after a successful withdrawal.
+Verify that the withdrawal history is updated after a successful withdrawal.
+Verify that the withdrawal amount is correctly deducted from the user’s balance after the transaction is complete.
+Verify that the withdrawal request is processed successfully within the expected time frame (e.g., within 2 minutes for normal, within 30 seconds for express).
+Verify that the user can successfully withdraw using the "Bank Transfer" payment method.
+Verify that the user can successfully withdraw using the "PayTM" payment method.
+Verify that the user can successfully withdraw using the "UPI" payment method.
+Verify that the user can withdraw after entering all required details (bank account number, IFSC, etc.) correctly.
+Verify that the withdrawal confirmation page displays correct details (e.g., amount, payment method, transaction reference).
+Verify that the user can successfully withdraw after entering valid UTR (transaction ID).
+Verify that the withdrawal process completes successfully when there is a stable internet connection.
+Verify that the user can see the updated balance on the withdraw page after submitting a withdrawal request.
+Verify that the user can withdraw successfully if the payment gateway and bank account are verified.
+Verify that all mandatory fields (bank account details, amount, UTR) are validated correctly before proceeding with the withdrawal.
+Verify that after entering an amount (e.g., ₹1000) and clicking on the "Proceed" button, the withdrawal request is successfully processed.
+Verify that withdrawal request is processed successfully and the balance is updated after entering the correct amount in the withdrawal field.
+Verify that the user can withdraw without any errors when the withdrawal method is correctly chosen.
+Verify that the "Proceed" button is disabled when the amount is invalid or below the minimum required withdrawal amount (e.g., ₹49).
+
+
+❌ Negative Test Cases for Withdraw Functionality
+Verify user clicks on "Withdraw" button without being logged in — user should be redirected to login page.
+Verify redirection fails if the withdraw page URL is broken or incorrectly configured.
+Verify when user tries to withdraw an amount greater than the available balance — should show an error.
+Verify "Proceed" button is disabled when the withdraw amount field is left blank.
+Verify "Proceed" button remains disabled when entered amount is below the minimum allowed (e.g., ₹49).
+Verify user enters non-numeric input (e.g., "abc") in the amount field — should show validation error.
+Verify user enters special characters (e.g., @$#%) in the amount field — should show validation error.
+Verify user enters negative amount (e.g., -₹100) in the amount field — should not proceed.
+Verify user enters amount exceeding the maximum limit (e.g., ₹6001 if ₹6000 is max) — should show error.
+Verify user enters decimal values beyond allowed precision (e.g., ₹50.999) — should not accept.
+Verify withdrawing amount without entering required bank account details — should block withdrawal.
+Verify withdrawing to an unverified or inactive payment method — should show warning or error.
+Verify that auto-refresh fails when balance is updated but Internet is disconnected.
+Verify user tries to withdraw amount and clicks "Back" during transaction — should prompt or prevent loss of data.
+Verify withdrawal fails gracefully if server is down at the time of submission.
+Verify user initiates rapid repeated withdrawals — system should throttle or block spam attempts.
+Verify user clicks on "Proceed" without network connection — proper error message should be shown.
+Verify withdrawing amount with leading zeros (e.g., 000050) — should be parsed and validated correctly.
+Verify empty amount field and selecting withdrawal method — should not proceed.
+Verify selecting invalid withdrawal method or corrupted option — system should show fallback or error.
+Verify user tries to access withdrawal page via direct URL manipulation with invalid parameters.
+Verify incorrect data or missing logs after withdrawal — system should handle it without crashing.
+Verify large withdrawal (within allowed limit) during peak hours — ensure no timeout or failure due to load.
+Verify network disconnect during the withdrawal process after amount is deducted — must reconcile or retry.
+Verify decimal values near boundary values (e.g., ₹49.99, ₹6000.01) — must validate properly.
+
+For Admin
+
+✅ Positive Test Cases for Withdraw Tab – Admin Side
+Verify redirection to the Withdraw page when the user clicks on the "Withdraw" tab from the navigation bar.
+Verify that the Withdraw details on the Withdraw page match the client-side data.
+Verify that the Status of each withdrawal request is displayed correctly and matches client-side information.
+Verify that User Details (e.g., name, user ID, email) in the Withdraw page match with the client-side records.
+Verify that the Withdrawal Amount shown in the page matches the client's request.
+Verify that the Risk (%) value is accurately displayed and calculated as per backend logic.
+Verify that Approval Details (approver name, date/time) are correctly shown and synced with the client side.
+Verify that the Withdraw Reference (transaction ID or internal reference) is accurate and matches client logs.
+Verify that Remaining or Turn Around Time (TAT) is calculated and displayed correctly for pending withdrawals.
+Verify that Gateway Details (mode of withdrawal such as Paytm, UPI, Bank Transfer) are shown correctly.
+Verify that additional Info (remarks, status updates) is displayed in the Withdraw page accurately.
+Verify that "View Bank Details" expands to show the correct linked bank account for the user.
+Verify that Logs section records every change or action taken (status change, comments, etc.).
+Verify that the Action buttons (Approve, Reject) are displayed and functional for eligible withdrawals.
+Verify that clicking "Approve" successfully marks the withdrawal as approved and updates the status/logs.
+Verify that clicking "Reject" marks the withdrawal as rejected and allows entering a rejection reason.
+Verify that withdrawals below a certain amount (e.g., Rs. 200 or Rs. 300) are auto-approved as per system rules.
+Verify that withdrawals below a threshold are auto-rejected based on risk analysis or pre-set rules.
+Verify that the system shows appropriate error messages or offline indicators when no Internet connection is available.
+Verify that clicking the "Export" button successfully downloads the admin data in a proper file format (CSV/XLS).
+Verify that clicking the "Export" button when no data is available shows a “No data to export” or similar prompt.
+Verify that the total withdrawal amount is calculated and displayed correctly on the Withdraw page (e.g., Total: ₹X).
+
+❌ Negative Test Cases for Withdraw Tab – Admin
+Verify behavior when user clicks on the "Withdraw" tab with no internet connection.
+Verify if withdraw details show mismatched data compared to client side (e.g., incorrect amount or user info).
+Verify system behavior when Status field is blank or shows an undefined status.
+Verify when User Details are missing or partially loaded (e.g., only user ID but no name or email).
+Verify when the Amount field is null or shows incorrect format (e.g., “abc” or “-100”).
+Verify if Risk (%) field shows a negative or value above 100.
+Verify when Approval Details are missing (no approver name or timestamp).
+Verify Withdraw Reference field with duplicate or blank values.
+Verify when Remaining/Turn Around Time is showing as a negative value.
+Verify if Gateway Details are missing or show an unsupported payment mode.
+Verify View Bank Details expands to show empty or incorrect data.
+Verify Logs section fails to show any previous activity on withdrawal.
+Verify clicking “Approve” without a valid withdrawal reference.
+Verify clicking “Reject” without providing a rejection reason (if mandatory).
+Verify auto-approval happens incorrectly for an amount above configured threshold.
+Verify auto-rejection fails to trigger on blacklisted user or high-risk percentage.
+Verify Export button when clicked repeatedly within seconds.
+Verify Export button click when no withdrawal data exists.
+Verify Exported file contains mismatched or partial data compared to displayed table.
+Verify “Total Withdrawal Amount” field displays incorrect total due to rounding or sync issue.
