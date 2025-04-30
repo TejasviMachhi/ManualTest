@@ -1,0 +1,88 @@
+✅ Positive Test Cases for Deposit Functionality - Client
+ Verify redirection to the deposit page when the user clicks on the "Deposit" button on the home page.
+ Verify successful deposit with the minimum allowed amount.
+ Verify successful deposit with the maximum allowed amount.
+ Verify auto-refresh of the wallet balance after a successful deposit.
+ Verify deposit using a valid promo code applies the appropriate discount or bonus.
+ Verify the user is redirected to the correct payment gateway (e.g., GPay, Paytm, PhonePe) when the respective option is selected.
+ Verify the deposit history section updates correctly after a successful transaction.
+ Verify the "+₹1000" button adds ₹1000 to the entered deposit amount.
+ Verify the "+₹2500" button adds ₹2500 to the entered deposit amount.
+ Verify the "+₹5000" button adds ₹5000 to the entered deposit amount.
+ Verify combined amount calculation when a user manually enters ₹1000 and then clicks "+₹2500".
+ Verify that the "Proceed" button is enabled when a valid amount is entered.
+ Verify users can enter decimal values and deposit successfully within boundary conditions.
+ Verify the amount is correctly shown next to the "Proceed" button before final submission.
+ Verify selecting "Change Method" allows switching between payment modes.
+ Verify entering a valid UTR (Transaction ID) number allows submission.
+ Verify the system accepts a leading-zero formatted amount (e.g., 0100 treated as ₹100).
+ Verify valid transaction with decimal input like ₹100.50, ₹9999.99 etc.
+ Verify successful deposit and confirmation message is shown.
+ Verify users can submit the deposit form with all mandatory fields filled correctly.
+ 
+ ❌ Negative Test Cases for Deposit Functionality - Client
+ Verify user is not redirected to the deposit page when clicking the "Deposit" button with broken or no internet connection.
+ Verify system shows error when trying to deposit an amount below the minimum allowed (e.g., ₹99 if ₹100 is the minimum).
+ Verify system shows error when trying to deposit more than the maximum allowed amount (e.g., ₹10,001 if ₹10,000 is the maximum).
+ Verify that the wallet balance is not updated if the deposit transaction fails.
+ Verify system behavior when user enters a negative value in the amount field (e.g., -₹100).
+ Verify that alphabets (e.g., "abc") are not accepted in the "Enter amount" field.
+ Verify that special characters (e.g., @#!$%) are not accepted in the "Enter amount" field.
+ Verify system throws an error for an expired promo code.
+ Verify system throws an error when entering an invalid promo code format.
+ Verify promo code field does not accept spaces or special symbols only.
+ Verify deposit attempt fails if the "Enter amount" field is left blank and user clicks "Proceed".
+ Verify clicking "Proceed" without selecting a payment method shows a validation error.
+ Verify clicking the back button during the deposit process cancels the transaction.
+ Verify clicking “Proceed” with no internet connection shows an appropriate error message.
+ Verify submitting without entering a UTR number shows an error when using manual deposit methods.
+ Verify system throws an error if invalid UTR number is entered (e.g., wrong format or too short).
+ Verify system does not proceed if only partial payment information is entered.
+ Verify system does not allow multiple rapid clicks on the “Proceed” button to prevent duplicate deposits.
+ Verify decimal input with more than 2 digits after the decimal (e.g., ₹100.999) is not accepted.
+ Verify system throws an error when deposit amount exceeds user’s daily/monthly transaction limit (if applicable).
+ 
+ For Admin side
+ 
+ ✅ Positive and UI/Functional Test Cases for Admin Deposit Page
+ Verify redirection to the Deposit tab when the user clicks on "Deposit" from the navigation bar.
+ Verify that all deposit details displayed on the deposit page match the client-side data.
+ Verify that the status shown in the deposit page matches the client-side status.
+ Verify that the user details on the deposit page are consistent with those on the client side.
+ Verify that the transaction amount displayed matches the amount shown on the client side.
+ Verify that the "Deposit Done By" field matches the information from the client side.
+ Verify that promo code details are displayed correctly and match the client-side entry.
+ Verify that payment gateway information matches the client-side selection.
+ Verify that the payment mode information (e.g., UPI, Paytm, Bank Transfer) is correctly shown.
+ Verify that the deposit reference number is displayed and matches the client-side transaction.
+ Verify that transaction logs are visible and consistent with system records.
+ Verify that the available actions (Approve, Reject) are visible and clickable.
+ Verify that clicking "Approve" in the Action column successfully updates the deposit status.
+ Verify that clicking "Reject" in the Action column successfully updates the deposit status.
+ Verify that deposits are auto-approved for valid amount ranges (e.g., ₹200, ₹300).
+ Verify that deposits are auto-rejected for invalid amount ranges (e.g., ₹200, ₹300) as per business rules.
+ Verify that all fields (User, Amount, Gateway Info, Status) handle no internet connection gracefully with appropriate error messages.
+ Verify that clicking the "Export" button downloads the admin deposit data in the correct format (e.g., CSV or Excel).
+ Verify that clicking the "Export" button when no data is available shows a proper message (e.g., “No records to export”).
+ 
+ ❌ Negative Test Cases for Admin Deposit Page
+ Verify clicking on the "Deposit" tab with no admin session redirects to the login page.
+ Verify incorrect or malformed deposit ID in URL returns an error or "No record found" message.
+ Verify that if the database connection fails, deposit data is not displayed and an error is shown.
+ Verify that the deposit page shows appropriate errors when the server is down.
+ Verify incorrect or mismatched deposit status between client and admin results in a discrepancy warning (if applicable).
+ Verify if the transaction amount field is blank or null in the database, the admin page handles it gracefully.
+ Verify broken or missing payment mode information displays a fallback or error text instead of crashing.
+ Verify the system prevents clicking "Approve" on a deposit with missing or invalid amount.
+ Verify the system prevents clicking "Reject" on a deposit already marked as completed.
+ Verify incorrect or invalid promo code details cause a validation or error state on the page.
+ Verify logs section remains empty or shows an appropriate message when no activity is recorded.
+ Verify that clicking "Approve" on an already rejected transaction does not change its status again.
+ Verify that clicking "Reject" on an already approved transaction does not change its status again.
+ Verify that entering special characters or HTML tags in the "Deposit Done By" field causes no script injection or UI issues.
+ Verify that the Export button does not perform any action or throws a validation error if no data is available.
+ Verify that the Export function fails gracefully when file write or download permission is denied.
+ Verify that sorting or filtering crashes the page when an unexpected data type is in a column.
+ Verify improper date formats in logs (e.g., "13-32-2024") are handled without crashing the UI.
+ Verify network loss during "Approve" or "Reject" action shows proper error and does not process the action.
+ Verify that refreshing the page during an "Approve" action doesn't submit the action multiple times.
