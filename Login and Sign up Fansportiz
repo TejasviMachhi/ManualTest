@@ -1,0 +1,123 @@
+🔐 Signup Page Tests
+
+✅ Navigation
+Verify redirection to the signup page when the user clicks on the "Signup" text on the "Login" page.
+
+🧑 Username Field Validation
+Verify username field with less than 3 characters.
+Verify username field with more than 15 characters.
+Verify username field with special characters.
+Verify username field with null/empty value.
+Verify username field with only numbers.
+Verify username field with only spaces.
+Verify username with spaces between characters.
+Verify username with alphanumeric + special characters.
+Verify username with leading/trailing spaces.
+Verify username with only zeros.
+Verify username with ASCII characters.
+Verify cursor moves to email field after entering valid username.
+Verify username field is protected against SQL injection.
+Verify username field is protected against Cross-Site Scripting (XSS).
+Verify username field with repeating characters.
+Verify username field with boundary values (e.g., 2, 4, 14, 16 characters).
+Verify username with all uppercase letters.
+Verify username with all lowercase letters.
+
+📧 Email Field Validation
+Verify email field with empty value.
+Verify email without @ symbol.
+Verify email without domain name.
+Verify email without username.
+Verify email without TLD (e.g., .com, .org).
+Verify email with invalid special characters in the username part.
+Verify email with multiple "@" symbols.
+Verify email with spaces.
+Verify email with leading/trailing spaces.
+Verify email with an invalid TLD.
+Verify email with numbers in TLD.
+Verify email exceeding maximum length (e.g., 320 characters).
+Verify email with consecutive dots in the username.
+Verify email with consecutive dots in the domain.
+Verify email with a dot at the end but no TLD.
+Verify email with non-ASCII characters.
+Verify email with invalid subdomain structure.
+Verify email with IP address as domain.
+Verify email with mixed case letters.
+Verify email with different country domains (e.g., .in, .uk).
+Verify with an already registered email ID.
+
+
+📱 Mobile Number Field Validation
+Verify with a valid 10-digit mobile number.
+Verify with a mobile number more than 10 digits.
+Verify with special characters.
+Verify with null/empty value.
+Verify with only zeros.
+Verify with spaces at the beginning or end.
+Verify with dots between digits.
+Verify the field accepts only numeric input.
+Verify by entering string/text input.
+Verify minimum digit requirement.
+Verify with spaces between digits.
+Verify with international mobile number format.
+
+🎁 Referral Code Field
+Verify with an empty referral code, then click "Signup".
+Verify with an invalid referral code, then click "Signup".
+Verify with a valid referral code, then click "Signup".
+
+🔢 OTP Verification
+Verify OTP delivery in low-signal or rural areas.
+Verify by entering a valid OTP.
+Verify by entering an invalid OTP.
+Verify boundary values for OTP (3, 4, 5, 7, 8, 9 digits).
+Verify with all zeros as OTP.
+Verify if the received OTP is linked to the correct mobile number.
+Verify daily OTP sending limit is enforced.
+Verify OTP session timeout (e.g., 60 seconds).
+
+🔒 Password Creation and Validation
+Verify regex validation on both password fields.
+Verify maximum character limit.
+Verify minimum character limit.
+Verify match between password and confirm password fields.
+Verify with spaces between characters.
+Verify case-sensitive mismatch is detected.
+Verify with trailing spaces.
+Verify by leaving confirm password empty, then click "Create Password".
+Verify when confirm password is longer than the password.
+Verify when confirm password is shorter than the password.
+Verify creating password with valid OTP and matching password fields.
+
+🔐 Login Screen Tests
+
+Verify login with valid mobile number and password.
+Verify login with invalid mobile number and valid password.
+Verify login with valid mobile number and invalid password.
+Verify login with invalid mobile and password.
+Verify login with valid email ID and valid password.
+Verify login with invalid email ID and password.
+Verify login with valid email and invalid password.
+Verify login with invalid email and valid password.
+Verify entering password only, then clicking "Login".
+Verify entering email only, leaving password blank.
+Verify entering mobile number only, leaving password blank.
+Verify with special characters in username and password.
+Verify with leading/trailing spaces in email/mobile fields.
+
+🔑 Forgot Password Flow
+Verify entering a valid OTP and setting a new password.
+Verify when a user successfully creates a new password.
+Verify submitting with a valid mobile number.
+Verify submitting with a valid email ID.
+Verify entering an invalid OTP and attempting to reset the password.
+Verify valid OTP with old password logic.
+Verify password not matching regex rules is rejected.
+Verify password with more than 18 characters is rejected.
+Verify using an expired/old OTP for password reset.
+Verify resend OTP functionality.
+Verify OTP session timeout (e.g., 60 seconds).
+Verify that the user can log in using the new password.
+Verify username field with boundary values (3–7 characters).
+Verify users receive a toast/notification upon successful password change.
+Verify leaving the OTP field empty, but filling in password fields triggers validation
