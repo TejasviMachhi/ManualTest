@@ -1,0 +1,44 @@
+🟢 Auto-Selection Functionality
+Verify that clicking the "Auto-Select - Yes" button in the "Match Players Agent" section enables automatic player selection.
+Verify that clicking the "Auto-Select - No" button disables automatic player selection.
+
+🟡 Player Selection Based on Sport Type
+Verify that the correct number of players can be entered based on the selected sport (e.g., 11 players for Cricket, 9 for Baseball).
+
+🔴 "Possible Combinations" Field Validation
+Verify that entering special characters in the "Possible Combinations" field triggers a validation error.
+Verify that entering string values in the "Possible Combinations" field triggers a validation error.
+
+🔵 Credit Limit Validation
+Verify that the system shows a validation error when Credit Limit (Max) is less than or equal to Credit Limit (Min).
+
+🟣 Selected & Neglected Player Size Field Validation
+Verify that entering special characters within numbers in the "Selected Player Size" and "Neglected Player Size" fields triggers a validation error.
+Verify that entering string values in these fields triggers a validation error.
+Verify that entering negative values in these fields triggers a validation error.
+
+🟤 Combination Logic and Count
+Verify that the system generates "Possible Combinations" accurately based on the selected player data.
+Verify that the "Team Count" matches the number of generated combinations entered in the "Possible Combinations" field.
+Verify that entering a value greater than the available possible combinations in "Team Count" field displays an error.
+
+🟠 Recalculation and Edge Case Testing
+Verify that clicking the "Re-Calculate" button updates the "Possible Combinations" field as expected.
+Verify that entering 0 in the "Possible Combinations" field and clicking "Get Combination Count" displays a validation or logical error.
+Verify that selecting only neglected players and clicking "Get Combination Count" shows 0 or an appropriate message.
+Verify that selecting 11 players without any neglected players and clicking "Get Combination Count" processes combinations correctly.
+Verify that selecting all players as neglected and clicking "Get Combination Count" shows no possible combinations or error.
+Verify that checking the "Caption" checkbox for all players and clicking "Get Combination Count" processes without issue.
+Verify that unchecking the "Caption" checkbox for all players and clicking "Get Combination Count" still allows processing if rules permit.
+
+🔽 Team and Player Dropdowns
+Verify that selecting "India Women" from the team name dropdown filters players correctly.
+Verify that selecting "West Indies Team" from the team name dropdown filters players correctly.
+Verify that selecting all players from "India Women" and clicking "Get Combination Count" returns expected combinations.
+Verify that selecting all players from "West Indies Team" and clicking "Get Combination Count" returns expected combinations.
+
+✅ Agent Assignment & Combination Creation
+Verify that entering a valid possible combination count, selecting "Add Instant Agent", and clicking the "Team" button successfully creates teams.
+Verify that entering a valid possible combination count, selecting "Add Rich Agent", and clicking the "Team" button successfully creates teams.
+Verify that the created combination count is correctly added and displayed under the team section.
+Verify that manually selecting players and clicking the "Get Combination Count" button successfully calculates valid team combinations.
