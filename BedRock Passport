@@ -1,0 +1,59 @@
+UI/UX Issues Report for Bedrock Passport
+
+🔐 Login/Signup Page Issues
+
+"Log in with your wallet" text is missing on the login page.
+"Forgot your password?" text is missing on the login page.
+"Don’t have an account? Sign up" text is missing on the login page.
+"Already have an account? Log in" text is missing on the sign-up page.
+The Sign Up button is missing from the Home page.
+
+🧾 Bedrock Passport - Early Access Form
+
+The Role field with dropdown options is missing.
+All form field labels should end with a semicolon (;), as per the Figma design.
+Mandatory fields are marked with a red dot instead of an asterisk (*).
+The "I'm not a robot" CAPTCHA is incorrectly included; it is not part of the design.
+Input fields are displaying with a white background, which does not match the Figma UI.
+
+💳 Red Orchid Cards Issues
+
+The gradient background of Red Orchid cards does not match the Figma design.
+The layout of Red Orchid cards is inconsistent with the design requirements.
+The Edit icon is missing from the Red Orchid cards.
+
+🎯 UI and Content Placement Issues
+
+The "Seamless Access" icon/text is mistakenly placed under the "Loyalty Driven Rewards" section.
+The "Loyalty Driven Rewards" icon/text is mistakenly placed under the "Seamless Access" section.
+The "Join the Wallet" button is aligned to the left side of the card instead of the right, as shown in the Figma UI.
+"Welcome to your Bedrock Passport!" text is missing from the Profile Card layout.
+The "Connect Wallet" button text should be "Connect with your Wallet".
+"Connect your Web3 Wallet" instructional text is missing.
+The message "If you haven’t logged in using your email before, you will create a new wallet using this email" is missing.
+The Google logo and email ID should appear as a single button element, not separately.
+
+🧭 Navigation Bar Issues
+
+Only two navigation icons are displayed; Figma design shows three.
+The Settings icon is missing from the navigation bar.
+The Notifications icon is missing from the navigation bar.
+The Account name is not displayed next to the profile picture on the main dashboard.
+
+🧱 Main Dashboard Issues
+
+A banner is missing from the main dashboard page.
+The "Explore Ecosystem" card layout does not match the Figma design.
+The "Return to my profile" button is incorrectly displayed above the email ID (should be below or differently placed).
+The Project Profile card layout does not match the Figma design.
+The orange text in the Project Profile section is incorrect (color mismatch).
+The Profile and Project Profile cards are inconsistent with Figma specifications.
+
+📸 Media Upload Issues
+
+The system does not accept profile images larger than 1 MB, although the UI indicates a 5 MB limit.
+The system does not accept banner images larger than 1 MB, although the UI indicates a 5 MB limit.
+
+👤 Profile Page
+
+The "Personal Information" section is missing from the profile page.
