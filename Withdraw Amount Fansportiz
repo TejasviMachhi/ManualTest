@@ -1,0 +1,62 @@
+✅ Positive Test Cases – Withdrawals & Winnings
+💰 Winnings and Balance
+Verify the correct winning amount is displayed after the contest ends.
+Verify the winning amount is added to the user’s available balance after contest completion.
+Verify the available cash balance updates immediately after withdrawal.
+Verify the wallet reflects the deducted withdrawal amount correctly.
+Verify the wallet reflects remaining bonus and winnings separately.
+
+💸 Withdrawals Functionality
+Verify the user can successfully withdraw a valid amount above the minimum threshold.
+Verify a withdrawal request is processed correctly when valid bank account details are available.
+Verify the withdrawal fee (₹10) is deducted properly and shown clearly in the transaction summary.
+Verify the withdrawal summary shows a breakdown: requested amount, taxes, fees, and final payout.
+Verify the system allows withdrawing to the selected verified bank account.
+Verify that the user receives a confirmation or success message after initiating withdrawal.
+Verify the user receives a transaction ID or reference number for tracking.
+
+🏦 Bank Information and Validation
+Verify the user can successfully add valid bank details (account holder name, number, IFSC, branch).
+Verify that the bank name dropdown displays and allows selection from valid bank names.
+Verify valid account numbers with leading or trailing zeros are accepted.
+Verify that valid IFSC codes are accepted and saved.
+Verify users can save and edit their bank details when necessary.
+Verify that bank details are retained and prefilled during the next withdrawal attempt.
+Verify a success message appears after bank details are saved.
+
+🧪 Additional Functional Validations
+Verify the user is able to withdraw full available winnings amount if above the minimum.
+Verify the withdrawal method (e.g., UPI, Net Banking) is selectable and functional.
+Verify a notification or email is sent after successful withdrawal initiation.
+Verify user can view withdrawal history under “Transactions” or “Wallet History”.
+Verify the system handles multiple sequential withdrawals gracefully.
+
+💰 Winnings and Cash Balance - Negative Test cases
+Verify the winning amount is displayed accurately after the contest ends.
+Verify the available cash balance is updated correctly after contest results.
+
+💸 Withdrawals
+Verify that entering 0 in the withdrawal field displays an appropriate validation error.
+Verify that users cannot withdraw money without adding a bank account.
+Verify that bonus amounts cannot be withdrawn.
+Verify the amount field by entering alphabetic characters (e.g., "five hundred").
+Verify the amount field by entering special characters (e.g., @#$%^).
+Verify the system prevents withdrawal of amounts below the minimum limit.
+Verify the system prevents withdrawal of amounts exceeding the available balance.
+Verify that applicable taxes are correctly deducted at the time of withdrawal.
+Verify that the standard withdrawal fee of ₹10 is applied correctly.
+Verify whether users are allowed to skip the “Standard Withdrawal” process.
+
+🏦 Bank Details Validation
+Verify that all bank names are listed in the dropdown.
+Verify that bank names are displayed in alphabetical order.
+Verify that the selected bank name is correctly shown in the field.
+Verify entering numeric values in the bank branch name field is restricted.
+Verify entering special characters in the bank branch name field is not allowed.
+Verify the bank branch name field accepts only valid string input.
+Verify entering numeric characters in the account holder's name field shows an error.
+Verify special characters are not allowed in the account number field.
+Verify valid account numbers with leading zeros are accepted.
+Verify IFSC code validation by entering incorrect or malformed codes.
+Verify that once all bank details are added, the data is saved successfully.
+Verify boundary values for the account number field (e.g., too short or too long).
