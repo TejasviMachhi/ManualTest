@@ -1,0 +1,28 @@
+ 🟠 Contest Joining Test Cases (Fansportiz)
+Verify the user is prevented from joining a contest without sufficient wallet balance.
+Verify the user is prevented from joining a contest without selecting a team.
+Verify the system behavior when the contest becomes full while the user tries to join.
+Verify the system response when internet connectivity is lost during contest joining.
+Verify the user is able to successfully join a contest in Fansportiz.
+Verify the user is able to switch teams after joining a contest.
+Verify the user can create more than one team to join a contest.
+Verify the user can join contests within the allowed limit.
+Verify the user can click on the "Auto Pick" option while creating a team.
+Verify the system allows users to create the maximum number of teams permitted for a contest.
+Verify the functionality when the user clicks the "Join" button to join a contest.
+Verify users are able to join different contests using created teams.
+Verify users can edit their teams after joining a contest (if allowed).
+Verify users can edit team players before the match starts.
+Verify users cannot edit their teams after the match has started.
+Verify system behavior when the user joins a contest, but the match is canceled or postponed by the cricket authority.
+Verify users can join contests using available bonus points.
+Verify users can join bonus leagues using bonus points.
+Verify the bonus percentage is correctly applied when joining contests with bonus points.
+Verify that once the user joins a contest, their username and team name appear on the leaderboard.
+Verify that after creating multiple teams, the user can click on "Confirm" to join a contest.
+Verify users receive loyalty points after joining contests, as per the defined requirements.
+Verify users can join a contest using multiple teams.
+Verify users can use different teams to join different contests.
+Verify users can use the same team to join multiple contests.
+Verify that after joining a contest, the contest name appears under the "My Contest" list.
+Verify system response when the user clicks on the "Join Contest" button.
