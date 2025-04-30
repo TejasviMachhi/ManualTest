@@ -1,0 +1,38 @@
+💰 Wallet Deposit Test Cases
+
+Postive Test Cases - Wallet Deposit(Add Money)
+Verify that the initial deposit balance is displayed correctly.
+Verify that clicking on ₹25, ₹100, or ₹150 updates the deposit amount field correctly.
+Verify that clicking on ₹25, ₹100, and ₹150 consecutively without clearing the field sums the values correctly.
+Verify system behavior when user clicks repeatedly on ₹25, ₹100, and ₹150 tabs.
+Verify that a single click on ₹25, ₹100, or ₹150 updates the deposit amount field correctly.
+Verify the maximum allowed deposit amount in the field.
+Verify the minimum allowed deposit amount in the field.
+Verify that clicking on the "Promo Code" field is optional (not mandatory for deposit).
+Verify that entering a valid promo code applies the discount/offer as per requirements.
+Verify system response when a used promo code is entered.
+Verify system response when an expired promo code is entered.
+Verify system response when an invalid promo code is entered.
+Verify the behavior when the user clicks on the "Proceed" button to add money.
+Verify that clicking on the "Stripe" option redirects to the appropriate payment gateway page.
+Verify that clicking on "Card and Net Banking" redirects to the correct page.
+Verify that clicking on "Coinbase" redirects to the correct crypto deposit page.
+Verify that clicking on "Paytm" redirects to the correct Paytm payment gateway.
+Verify that the entered deposit amount is successfully transferred through all supported methods (Paytm, UPI, Stripe, etc).
+
+❌ Negative Test Cases – Wallet Deposit (Add Money)
+Verify entering a deposit amount below the minimum limit.
+Verify entering a deposit amount above the maximum limit.
+Verify entering special characters in the amount field (e.g., #25, !100).
+Verify entering alphabets in the amount field (e.g., fifty, abc).
+Verify leaving the amount field empty and clicking the "Proceed" button.
+Verify entering negative values in the amount field (e.g., -100).
+Verify entering zero (0) in the amount field.
+Verify clicking on the promo code field and entering only spaces.
+Verify applying a promo code that has already been used.
+Verify entering an expired promo code.
+Verify entering a promo code in invalid format (e.g., too short, contains special characters).
+Verify clicking on “Proceed” with invalid or empty promo code and expecting a discount.
+Verify redirection failure when clicking on a payment gateway option (e.g., Stripe or Paytm link broken).
+Verify system behavior when Internet connection is lost after clicking “Proceed.”
+Verify entering excessive value by pasting a very large number (e.g., 9999999999).
