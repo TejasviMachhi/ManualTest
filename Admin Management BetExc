@@ -1,0 +1,50 @@
+✅ Positive Test Cases
+Verify that the Admin Management tab opens when clicked from the navigation bar.
+Verify clicking on "+Add Role" redirects to the Add Role page.
+Verify enabling the status toggle button activates the selected role.
+Verify disabling the status toggle button deactivates the selected role.
+Verify that roles are listed correctly in the Role column.
+Verify clicking the Edit button opens the role editing interface.
+Verify clicking the Delete button removes the role after confirmation.
+Verify the role list changes based on selected row count (10, 20, 50, etc.).
+Verify the Export button downloads admin data in the correct format.
+Verify the Search field correctly filters admins by username, email, or name.
+Verify the Date Range filter shows results based on selected date.
+Verify selecting "Full Read Access" filters admins accordingly.
+Verify selecting "Co-Admin" filters admins accordingly.
+Verify the Status toggle correctly updates user status and reflects immediately.
+Verify admin details such as Username, Full Name, Email, Mobile Number, and Last Login Time are displayed correctly.
+Verify clicking Edit on an admin record opens the edit page with pre-filled data.
+Verify Admin Logs page loads successfully with correct filters.
+Verify search by Username in Admin Logs returns accurate results.
+Verify filtering logs by Operation Type returns relevant actions.
+Verify that IP Whitelisting page loads properly.
+Verify adding a valid new IP works correctly.
+Verify filtering IPs by type shows matching entries.
+Verify pagination in Admin Logs and IP Whitelist works as expected.
+Verify clicking "Cancel" in Add Role or Add IP pages redirects back correctly.
+Verify the Add Role form accepts valid string input.
+
+❌ Negative Test Cases
+
+Verify the Admin Management tab does not load without an internet connection.
+Verify Export button behavior when no data is available — should show a message or download an empty file.
+Verify Search with special characters or unsupported symbols returns no results or error.
+Verify selecting an invalid or reversed date range displays an error or no data.
+Verify applying a Role filter that has no associated admins shows empty results.
+Verify editing admin details without the proper permissions shows an access-denied message.
+Verify activating/deactivating an admin while offline shows an appropriate error.
+Verify manually entering a non-existent page number in pagination results in error or no data.
+Verify selecting an unusually large row count causes no crash but may slow performance.
+Verify system behavior when two admins have the same username/email — should show validation errors.
+Verify searching for an invalid username in Admin Logs returns no results.
+Verify selecting a future date range in Admin Logs returns no logs.
+Verify applying an Operation Type filter with no matching logs shows empty state.
+Verify loading Admin Logs without internet shows a connection error.
+Verify viewing action logs with an expired session redirects to login.
+Verify adding an IP with an invalid format (e.g., missing dots, too many segments).
+Verify adding a duplicate IP address shows validation or duplication error.
+Verify submitting Add IP form with missing required fields prevents submission.
+Verify submitting empty IP Description or IP Address fields shows error.
+Verify entering only numbers, special characters, or blank input in the Add Role form shows validation errors.
+Verify clicking "Cancel" in Add Role or Add IP form doesn't save the data.
