@@ -1,0 +1,182 @@
+✅ Positive Test Cases – Transaction History - Client
+Verify redirection to the Transaction History page when the user clicks on "View Transaction History" from the Profile page.
+Verify that clicking on the "Pending Transactions" tab displays only pending transactions.
+Verify that all transactions are displayed under the "All Transactions" tab.
+Verify deposit transactions appear correctly under the "Deposit" tab.
+Verify withdrawal transactions appear correctly under the "Withdraw" tab.
+Verify sports-related transactions appear under the "Sports" tab.
+Verify casino-related transactions appear under the "Casino" tab.
+Verify that the transaction list format matches the UI/UX design specifications.
+Verify that the transaction date displayed matches the actual transaction date.
+Verify that the transaction time displayed matches the actual transaction time.
+Verify functionality of "Choose Date Range" for filtering transactions.
+Verify that transactions are correctly filtered when a valid start and end date are selected.
+Verify that clicking "This Week" filters transactions from the current week.
+Verify that clicking "This Month" filters transactions from the current month.
+Verify that clicking "This Year" filters transactions from the current year.
+Verify that clicking the "Clear Filter" button removes applied date filters.
+Verify that clicking on a specific transaction opens the detailed view.
+Verify that an appropriate message is displayed when no transactions are present.
+Verify that clicking "Start Playing" redirects correctly when no transaction is available.
+Verify that the "Transaction ID" is unique and displayed correctly.
+Verify the "Session ID" is displayed accurately in transaction details.
+Verify the "Session Time" is correctly calculated and shown.
+Verify the "Remark" field shows relevant information for each transaction.
+Verify that the "Prize Breakup" section is shown for contest-based transactions.
+
+✅ Positive Test Cases – Raise a Query
+Verify that clicking "Raise a Query" opens the respective form from the transaction details page.
+Verify that all mandatory fields (Title, Type, and Message) are present.
+Verify that the user can enter the maximum allowed characters in the "Title" field.
+Verify that the user can enter the minimum allowed characters in the "Title" field.
+Verify the dropdown in the "Type" field is functional and shows all options.
+Verify that the user can enter the maximum allowed characters in the "Message" field.
+Verify that the user can enter the minimum required characters in the "Message" field.
+Verify successful form submission with valid Title and Message fields.
+Verify successful query submission with an attached valid image file (e.g., PNG or JPG).
+Verify form submission when Title and Message are filled and the image field is left blank.
+
+✅ Positive Test Cases – Tabs After Transaction
+Verify the "All" tab is updated when a new transaction occurs.
+Verify the "Deposit" tab is updated after a successful deposit transaction.
+Verify the "Withdraw" tab is updated after a successful withdrawal transaction.
+Verify the "Sports" tab reflects a new sports bet transaction.
+Verify the "Casino" tab reflects a new casino bet transaction.
+
+✅ Positive Test Cases – Transaction Details
+Verify the UTR (Unique Transaction Reference) number is displayed correctly.
+Verify the "Created On" and "Approved On" dates are accurate for deposit transactions.
+Verify the "Played On" date and time are correct for casino transactions.
+Verify the "Game Name" is displayed as per requirement for casino transactions.
+Verify the "Game Code" is displayed as per requirement for casino transactions.
+
+❌ Negative Test Cases – Transaction History
+Verify that an error message is displayed when trying to access the Transaction History page without being logged in.
+Verify that the "Pending Transactions" tab displays an error or empty state when there are no pending transactions.
+Verify that selecting an invalid or corrupted date range does not break the page and shows an appropriate error.
+Verify that filtering transactions with a future date range shows no results with a proper message.
+Verify that the transaction list does not load when there is no internet connection.
+Verify behavior when transaction data fails to load due to server error (e.g., 500 error).
+Verify that clicking on an invalid or missing transaction entry shows an appropriate error or fallback message.
+Verify that clicking "Clear Filter" without applying any filters does not cause any page malfunction.
+Verify that the transaction list format does not break when a transaction includes a long remark or special characters.
+Verify that an invalid "Transaction ID" does not redirect to an unrelated or broken page.
+Verify behavior when "Choose Date Range" is clicked but no start/end date is selected and "Apply" is clicked.
+Verify that the transaction list does not crash when session ID or session time is null or missing in data.
+
+❌ Negative Test Cases – Raise a Query
+Verify that submitting the Raise a Query form with an empty Title field shows a validation error.
+Verify that submitting the Raise a Query form with an empty Message field shows a validation error.
+Verify that submitting the form with both Title and Message fields empty displays proper error messages.
+Verify that uploading an unsupported file format (e.g., .exe, .zip) in the image upload shows an error.
+Verify that the form fails to submit if the "Type" dropdown is not selected.
+Verify that the form displays an error when the "Title" exceeds the maximum character limit.
+Verify that the form displays an error when the "Message" exceeds the maximum character limit.
+Verify that submitting the query form without internet connection shows a relevant error message.
+Verify that submitting the form with only spaces in the Title or Message field is not allowed.
+Verify that using SQL/script input (e.g., DROP TABLE) in the Title or Message field is sanitized or rejected.
+Verify that clicking "Submit" multiple times rapidly does not result in multiple query entries.
+
+❌ Negative Test Cases – Tabs & Data Visibility
+Verify that the "All" tab does not show transactions when the backend API fails.
+Verify that newly made deposit transactions do not reflect if the sync fails between frontend and backend.
+Verify that the "Casino" tab shows an error when the casino transaction data is corrupted or incomplete.
+Verify that no error is thrown if there is no UTR number available for a transaction.
+Verify that the "Game Code" is not shown incorrectly for non-casino transactions.
+Verify that "Played On" is not displayed for non-play-related transactions (e.g., deposit).
+Verify the UI does not crash if the transaction list contains a null "Game Name" field.
+
+For Admin 
+✅ Positive Test Cases – Transaction Page Verification
+Verify that the Passbook ID of the user matches the value displayed on the client side.
+Verify that the transaction status of the user is the same as displayed on the client side.
+Verify that the username and transaction details are correctly displayed in the transaction page.
+Verify that the user’s mobile number is correctly shown in the transaction page.
+Verify that the transaction amount matches the value displayed on the client side.
+Verify that the applied promo code (if any) is correctly displayed in the transaction list.
+Verify that the available total balance of the user is correctly shown on the transaction page.
+Verify that the user type (e.g., regular, VIP) matches what is shown on the client side.
+Verify that the website name associated with the user is correctly displayed as per the client side.
+Verify that the game platform (e.g., Casino, Sports) is shown correctly for the user.
+Verify that the transaction type (e.g., Deposit, Withdraw) matches the client-side display.
+Verify that the transaction ID of the user matches the ID displayed on the client side.
+Verify that the request date and time are accurately shown and match the client-side details.
+Verify that the approval date and time are correctly displayed and match the client side.
+Verify that any remarks entered for the transaction are the same as those on the client side.
+Verify that all transaction details handle offline access correctly and show an appropriate message when there's no internet connection.
+Verify that clicking the “Export” button downloads the transaction data in the expected format.
+Verify that clicking the “Export” button when no data is available shows an appropriate message or disables the option.
+
+Positive Test Cases – Transaction History
+Verify redirection to the Transaction History page when the user clicks on "View Transaction History" from the Profile page.
+Verify that clicking on the "Pending Transactions" tab displays only pending transactions.
+Verify that all transactions are displayed under the "All Transactions" tab.
+Verify deposit transactions appear correctly under the "Deposit" tab.
+Verify withdrawal transactions appear correctly under the "Withdraw" tab.
+Verify sports-related transactions appear under the "Sports" tab.
+Verify casino-related transactions appear under the "Casino" tab.
+Verify that the transaction list format matches the UI/UX design specifications.
+Verify that the transaction date displayed matches the actual transaction date.
+Verify that the transaction time displayed matches the actual transaction time.
+Verify functionality of "Choose Date Range" for filtering transactions.
+Verify that transactions are correctly filtered when a valid start and end date are selected.
+Verify that clicking "This Week" filters transactions from the current week.
+Verify that clicking "This Month" filters transactions from the current month.
+Verify that clicking "This Year" filters transactions from the current year.
+Verify that clicking the "Clear Filter" button removes applied date filters.
+Verify that clicking on a specific transaction opens the detailed view.
+Verify that an appropriate message is displayed when no transactions are present.
+Verify that clicking "Start Playing" redirects correctly when no transaction is available.
+Verify that the "Transaction ID" is unique and displayed correctly.
+Verify the "Session ID" is displayed accurately in transaction details.
+Verify the "Session Time" is correctly calculated and shown.
+Verify the "Remark" field shows relevant information for each transaction.
+Verify that the "Prize Breakup" section is shown for contest-based transactions.
+
+✅ Positive Test Cases – Raise a Query
+Verify that clicking "Raise a Query" opens the respective form from the transaction details page.
+Verify that all mandatory fields (Title, Type, and Message) are present.
+Verify that the user can enter the maximum allowed characters in the "Title" field.
+Verify that the user can enter the minimum allowed characters in the "Title" field.
+Verify the dropdown in the "Type" field is functional and shows all options.
+Verify that the user can enter the maximum allowed characters in the "Message" field.
+Verify that the user can enter the minimum required characters in the "Message" field.
+Verify successful form submission with valid Title and Message fields.
+Verify successful query submission with an attached valid image file (e.g., PNG or JPG).
+Verify form submission when Title and Message are filled and the image field is left blank.
+
+✅ Positive Test Cases – Tabs After Transaction
+Verify the "All" tab is updated when a new transaction occurs.
+Verify the "Deposit" tab is updated after a successful deposit transaction.
+Verify the "Withdraw" tab is updated after a successful withdrawal transaction.
+Verify the "Sports" tab reflects a new sports bet transaction.
+Verify the "Casino" tab reflects a new casino bet transaction.
+
+✅ Positive Test Cases – Transaction Details
+Verify the UTR (Unique Transaction Reference) number is displayed correctly.
+Verify the "Created On" and "Approved On" dates are accurate for deposit transactions.
+Verify the "Played On" date and time are correct for casino transactions.
+Verify the "Game Name" is displayed as per requirement for casino transactions.
+Verify the "Game Code" is displayed as per requirement for casino transactions.
+
+❌ Negative Test Cases – Transaction Page Verification
+Verify system behavior when Passbook ID is missing or not mapped correctly between admin and client side.
+Verify transaction status mismatch between admin panel and client side display.
+Verify if incorrect username appears in the transaction list (e.g., username of another user).
+Verify when mobile number format is invalid or shows partial/masked number in admin panel.
+Verify if the transaction amount displayed does not match the amount shown to the user.
+Verify when promo code used by the user is not visible in the transaction list.
+Verify if available balance is not updated after a completed transaction.
+Verify when user type is incorrectly labeled in the admin panel (e.g., VIP shown as Regular).
+Verify if an incorrect website name is associated with the transaction.
+Verify if the game platform field is empty or incorrectly displays a different platform.
+Verify when the transaction type field shows the wrong category (e.g., Withdraw instead of Deposit).
+Verify if transaction ID is missing, duplicated, or mismatched with the client-side record.
+Verify when the request date/time is shown in the wrong time zone or incorrect format.
+Verify if the approval date/time does not match or is missing in the admin panel.
+Verify when remarks are not saved or displayed incorrectly in the transaction details.
+Verify system behavior when internet connection is lost while fetching transaction data.
+Verify if the export button does not respond or exports an empty/incomplete file when data is available.
+Verify if the export button is clickable and performs an action even when no data is present.
+Verify system behavior when unauthorized users access the transaction page.
+Verify error handling when API fails to fetch transaction data from the client side.
