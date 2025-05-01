@@ -1,0 +1,122 @@
+✅ Sidebar and Layout Validation
+Positive Test Cases
+Verify all sidebar navigation links redirect to the correct pages.
+Verify the sidebar layout adjusts correctly across screen sizes (desktop, tablet, mobile).
+Verify clicking “Log out” displays a confirmation alert.
+Verify the “Log out” option successfully logs the user out and redirects to the login screen.
+Verify the user's name and profile picture are displayed as per requirements.
+Verify the UI adjusts correctly for various resolutions (responsive design).
+Verify all navigation and interactions are possible using only the keyboard.
+Verify cross-browser compatibility: Chrome, Edge, Opera, Safari, Brave, and Internet Explorer.
+
+❌ Negative Test Cases
+Attempt to navigate using broken or unavailable sidebar links.
+Test layout breakage on non-standard resolutions.
+Try pressing “Log out” without internet connection — check error handling.
+Verify profile image placeholder displays when the image fails to load.
+Simulate unsupported screen reader behavior to detect accessibility issues.
+
+✅ Event Page Validation
+Positive Test Cases
+Verify the initial event page state loads without any events or opportunities.
+Verify correct messages are shown when no events or opportunities exist.
+Verify single-click on “Create Event” button opens the event creation form.
+Verify the filter functionality correctly narrows down the event/opportunity list.
+Verify the notification bell shows unread notifications.
+Verify the search bar filters events correctly by name or keyword.
+
+❌ Negative Test Cases
+Double-click “Create Event” and verify no duplicate action is triggered.
+Click “Create Event” as a new (unauthorized) user and ensure proper warning is displayed.
+Check the search bar with special characters or invalid inputs.
+Verify filters with no matching results show appropriate "No Results" message.
+Verify event/opportunity cards don't load when API fails — check fallback UI.
+
+✅ Create Event Page Validation
+Positive Test Cases
+Verify a new event is saved when all required fields are valid.
+Verify “Connect” section allows adding communication/contact methods.
+Verify a valid event name (max 50 chars) and description (max 5000 chars) are accepted.
+Verify alphanumeric and whitespace data is accepted in event name/description.
+Verify unique event names are saved successfully.
+Verify proper validation for online vs. in-person event type.
+Verify category dropdown works and saves selected value.
+Verify correctly placed and styled error messages on validation failures.
+
+❌ Negative Test Cases
+Click “Create” without filling any field — verify required field errors.
+Double-click “Create” without input — ensure no duplicate submission.
+Enter only special characters or only numeric data in name/description — verify rejection.
+Enter a name identical to an existing event — check for duplication error.
+Submit with either name or description empty — verify validation.
+Submit corrupted data in form (e.g., script injections) — verify sanitization.
+Check validation messages for all fields — spelling, grammar, and placement.
+
+✅ Date & Time Field Validation
+Positive Test Cases
+Enter valid date format (MM/DD/YYYY) and verify acceptance.
+Edit a previously selected date and save successfully.
+Select valid future date to create an event.
+Use calendar widget to navigate months and select a specific day.
+Verify correct behavior during leap years (e.g., Feb 29).
+Verify the widget supports time zone-aware selection.
+Verify the calendar is responsive and works on all screen sizes.
+Verify the calendar displays correct language (if multi-language supported).
+
+❌ Negative Test Cases
+Enter invalid date formats (e.g., 13/40/2025, 00/01/2025) — verify rejection.
+Attempt to create an event with past date — validate restriction.
+Simulate invalid year inputs or letters in date fields.
+Test multiple calendars on the same page for conflicts.
+
+✅ URL Field Validation
+Positive Test Cases
+Enter a valid HTTPS URL — verify it’s accepted.
+Enter HTTP URL — verify acceptance but log a warning if applicable.
+Encode special characters in URL and verify redirection works.
+Handle URLs with anchors and query parameters properly.
+
+❌ Negative Test Cases
+Enter invalid URL formats (e.g., "example", "htp://site") — check rejection.
+Enter unsupported protocols (e.g., FTP) — verify validation failure.
+Enter malformed or incomplete URLs — verify proper error messages.
+
+✅ Image Upload Validation
+Positive Test Cases
+Upload valid image files (JPG, PNG, JPEG) within size limits.
+Ensure only one image is allowed — reject multiple file uploads.
+Allow canceling an in-progress upload.
+Display progress indicator during upload.
+Ensure upload is accessible via keyboard navigation.
+Validate retry functionality after a failed upload.
+Show image preview after successful upload.
+
+❌ Negative Test Cases
+Upload unsupported file formats (e.g., .exe, .svg) — verify rejection.
+Upload images exceeding the size limit — validate error message.
+Simulate network loss during upload — validate retry or error message.
+Upload corrupted or malicious files — verify rejection and security handling.
+Attempt upload when “Upload” button is disabled — verify no action occurs.
+
+✅ Price Textbox Validation
+Positive Test Cases
+Validate default values in “From” and “To” fields.
+Enter a valid numeric range where “From” ≤ “To”.
+Support edge cases like “From” = “To”.
+Validate persistence of range on form submission.
+Ensure keyboard accessibility and proper field labeling.
+Confirm correct API call with range values on submission.
+
+❌ Negative Test Cases
+Enter non-numeric or special characters — verify rejection.
+Leave either field empty and attempt submission — check validation.
+Enter “From” > “To” — verify logic error message.
+Enter out-of-bound values — verify maximum/minimum limits.
+Check misaligned labels or validation messages against design specs.
+
+🟡 Final Validation Checklist
+All form validations must display clear, actionable error messages.
+Accessibility compliance (WCAG) for screen readers, keyboard nav, color contrast.
+Responsive behavior tested across major devices (iOS, Android, tablets, desktops).
+API requests and responses validated using network tools.
+All error states must be logged appropriately.
